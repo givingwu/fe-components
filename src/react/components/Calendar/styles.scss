@@ -1,0 +1,83 @@
+
+$primary-color: rgb(255, 142, 42);
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+v_h_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar {
+  color: #333;
+  background-color: #fff;
+
+  &-head,
+  &-body {
+    display: flex
+  }
+
+  &-head {
+    flex-direction: column;
+
+    &__date,
+    &__week {
+      display: flex;
+      align-items: center;
+    }
+
+    &__date {
+      justify-content: space-around;
+      padding: 10px 50px;
+    }
+
+    &__week {
+      padding: 10px 30px;
+      background-color: #eee;
+
+      &__cell {
+        @extend v_h_center;
+        flex: 1;
+        width: 14.28571429%;
+        text-align: center;
+      }
+    }
+  }
+
+  &-body {
+    overflow: hidden;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px 30px;
+
+    &__cell {
+      @extend v_h_center;
+      width: 14.28571429%;
+      padding: 10px 5px;
+
+      &__item {
+        @extend v_h_center;
+        min-width: calc((100vw - 100px) / 8);
+        padding: 5px 10px;
+
+        &.disabled {
+          color: #b1b1b1;
+        }
+
+        &.current {
+          color: #fff;
+          border-radius: 5px;
+          background-color: $primary-color;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

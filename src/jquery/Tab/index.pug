@@ -1,0 +1,17 @@
+.tab.J_Tab
+  .tab-hd
+    .row.tab-list
+      a.col.col-8.tab-item.J_TabItem.active
+        span 房建工程
+      a.col.col-8.tab-item.J_TabItem
+        span 公路工程
+      a.col.col-8.tab-item.J_TabItem
+        span 管廊/地铁工程
+  .tab-bd
+    include TabPanel.pug
+    .tab-cont.J_TabCont.active
+      +TabPanel()
+    .tab-cont.J_TabCont
+      +TabPanel()
+    .tab-cont.J_TabCont
+      +TabPanel()

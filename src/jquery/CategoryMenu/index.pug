@@ -1,0 +1,31 @@
+mixin CategoryMenu(hideCategory)
+  - var links = [{"title":"劳保用品、日杂、易耗品","href":"/category/1"},{"title":"给排水材料、管件","href":"/category/2"},{"title":"电工电料、电气辅料","href":"/category/3"},{"title":"水暖器材、阀门管件","href":"/category/4"},{"title":"灯具照明、灯具配件","href":"/category/5"},{"title":"装饰材料、防水保温","href":"/category/6"},{"title":"卫浴洁具","href":"/category/7"},{"title":"管材、型材、板材","href":"/category/8"},{"title":"油漆涂料、化工辅料","href":"/category/9"},{"title":"工具、仪器、附件耗材","href":"/category/10"},{"title":"五金机电、紧固件","href":"/category/11"},{"title":"消防器材、空调通风","href":"/category/12"},{"title":"水泵","href":"/category/13"},{"title":"办公用品","href":"/category/14"},{"title":"门禁设备、收验货设备","href":"/category/15"}]
+  .category.J_CategoryMenu(class=`${hideCategory ? 'hide-category-menu' : ''}`)&attributes(attributes)
+    .category-hd.J_CategoryMenuHead
+      h2 全部商品分类
+    .category-bd.J_CategoryMenuBody
+      ul.category-list.J_CategoryList
+        each link, index in links
+          li(data-index=index).category-item.J_CategoryMenuItem
+            a(href=link.href, title=link.title)= link.title
+    .category-ft.J_CategoryPanelWrapper
+      //- lazyload DOM structure
+      //- .category-panel.J_CategoryPanel
+        .category-panel-item
+          .category-panel-title
+            span 玛钢管件
+          .category-panel-list
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+        .category-panel-item
+          .category-panel-title
+            span 玛钢管件
+          .category-panel-list
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件
+            a(href="") 玛钢管件

@@ -1,0 +1,42 @@
+.input-number {
+  display: inline-block;
+  border: 1px solid #E1E6EC;
+  @extend .clearfix;
+
+  &__btn {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    color: $font-gray-color;
+    font-size: 1.35em;
+    font-weight: bold;
+    text-align: center;
+
+    &:hover {
+      color: $primary-color;
+    }
+
+    @include disabled;
+  }
+
+  &__plus {
+    float: right;
+    border-left: 1px solid #E1E6EC;
+  }
+
+  &__item {
+    width: 45px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: none;
+    padding: 5px;
+  }
+
+  &__minus {
+    float: left;
+    border-right: 1px solid #E1E6EC;
+  }
+
+}

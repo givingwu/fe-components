@@ -1,0 +1,42 @@
+- var placeholder = require('assets/image/placeholder.png')
+- var images = [{
+-   s: '//img12.360buyimg.com/n5/jfs/t21964/10/1916723046/144099/f8e5eb25/5b3cdb07N6857ea76.jpg',
+-   l: '//img12.360buyimg.com/n1/jfs/t21964/10/1916723046/144099/f8e5eb25/5b3cdb07N6857ea76.jpg'
+- }, {
+-   s: '//img12.360buyimg.com/n5/jfs/t23629/227/686524404/192028/1986b839/5b3cdb07N39990ffe.jpg',
+-   l: '//img12.360buyimg.com/n1/jfs/t23629/227/686524404/192028/1986b839/5b3cdb07N39990ffe.jpg'
+- }, {
+-   s: '//img12.360buyimg.com/n5/jfs/t22165/247/1896928691/521531/6371965e/5b3cdb09N115c836c.png',
+-   l: '//img12.360buyimg.com/n1/jfs/t22165/247/1896928691/521531/6371965e/5b3cdb09N115c836c.png'
+- }, {
+-   s: '//img12.360buyimg.com/n5/jfs/t21964/10/1916723046/144099/f8e5eb25/5b3cdb07N6857ea76.jpg',
+-   l: '//img12.360buyimg.com/n1/jfs/t21964/10/1916723046/144099/f8e5eb25/5b3cdb07N6857ea76.jpg'
+- }, {
+-   s: '//img13.360buyimg.com/n5/jfs/t1/25239/12/5705/227731/5c407a74Ea11db667/44d40ec9b39c5ecb.jpg',
+-   l: '//img13.360buyimg.com/n1/jfs/t1/25239/12/5705/227731/5c407a74Ea11db667/44d40ec9b39c5ecb.jpg'
+- }, {
+-   s: '//img13.360buyimg.com/n5/jfs/t1/29231/34/5693/214861/5c407a74Ea6956b61/c5aed9f3c9303341.jpg',
+-   l: '//img13.360buyimg.com/n1/jfs/t1/29231/34/5693/214861/5c407a74Ea6956b61/c5aed9f3c9303341.jpg'
+- }]
+
+mixin PreviewSwitcher(length, nav = true)
+  - images = length ? images.splice(0, length) : images
+  .preview.J_Preview#J_Preview
+    .preview-bd.J_PreviewCurrent
+      if images
+        img.preview-image(src=images[0].l, alt=images[0].t, title=images[0].t)
+      else
+        img.preview-image(src=placeholder, alt="placeholder", title="加载中...")
+    .preview-ft.J_PreviewNav
+      if nav
+        a.preview-switcher.preview-prev.J_PreviewPrev(href="javascript:void(0);", title="上一张")
+          i.icon.icon-prev
+        a.preview-switcher.preview-next.J_PreviewNext(href="javascript:void(0);", title="下一张")
+          i.icon.icon-next
+      .preview-items.J_PreviewItems
+        ul.preview-items-wrap.J_PreviewItemsList
+          if images
+            for image in images
+              li.preview-item.J_PreviewItem
+                img(data-origin=image.l, src=image.s, alt=image.t, title=image.t)
+

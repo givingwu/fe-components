@@ -1,0 +1,54 @@
+.checkbox {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid $default-color;
+  cursor: pointer;
+
+  &.active {
+    color: $default-active-color;
+    border-color: $default-active-color;
+  }
+
+  &.hover {
+    color: $default-hover-color;
+    border-color: $default-hover-color;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    color: $disabled-color;
+    border-color: #DBDFE5;
+    background-color: $default-disabled-color;
+  }
+
+  &.checked {
+    color: #fff;
+    background-color: $primary-color;
+    border-color: $primary-color;
+
+    &:before {
+      content: "\e603";
+    }
+
+    &.active {
+      color: $primary-active-color;
+      border-color: $primary-active-color;
+    }
+
+    &.hover {
+      color: $primary-hover-color;
+      border-color: $primary-hover-color;
+    }
+
+    &.disabled {
+      cursor: not-allowed;
+      color: rgba($color: #fff, $alpha: .6);
+      border-color: $disabled-color;
+      background-color: $disabled-color;
+    }
+  }
+}

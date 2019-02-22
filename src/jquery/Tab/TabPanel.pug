@@ -1,0 +1,46 @@
+mixin TabPanel(stages)
+  - stages = stages || [{
+  -   title: '临建阶段',
+  -   desc: '选址布局合理，符合消防要求',
+  -   src: '',
+  - }, {
+  -   title: '基础施工',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }, {
+  -   title: '地下主体',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }, {
+  -   title: '地上主体',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }, {
+  -   title: '安装阶段',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }, {
+  -   title: '装饰阶段',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }, {
+  -   title: '收尾阶段',
+  -   desc: '保证安全，护航项目每个阶段',
+  -   src: '',
+  - }]
+  .panel
+    each stage, index in stages
+      if index === 0
+        .panel-item.panel-first
+          .panel-item-l
+            img(src=stage.src, alt=stage.title)
+          .panel-item-r.small-title
+            h3= stage.title
+            small= stage.desc
+      else
+        .panel-item
+          .panel-item-t.small-title
+            h4= stage.title
+            small= stage.desc
+          .panel-item-b
+            img(src=stage.src, alt=stage.title)

@@ -1,0 +1,32 @@
+:global {
+  .custom-tab {
+    &-bar {
+      color: rgb(159, 159, 159);
+      padding: 10px 10px;
+
+      &-active {
+        position: relative;
+        padding: 10px 10px;
+        color: rgb(4, 6, 20);
+
+        &::before {
+          content: ' ';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 1px;
+          width: 100%;
+          background-color: rgb(4, 6, 20);
+        }
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      white-space: nowrap;
+      overflow: auto;
+    }
+  }
+}

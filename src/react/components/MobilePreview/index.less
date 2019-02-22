@@ -1,0 +1,50 @@
+// @wxPicLink: "https://res.wx.qq.com";
+// @wxPhonePic: "@{wxPicLink}/mpres/zh_CN/htmledition/comm_htmledition/style/widget/wx_phone_preview/wx_phone_preview_z3a7b39.png";
+// @wxOriginPic: "@{wxPicLink}/mpres/htmledition/images/appmsg/icon_original_tag3a7b38.png";
+@PhonePic: "components/MobilePreview/mobile.png";
+
+.phone {
+  display: inline-block;
+  // width: 360px;
+  // height: 680px;
+  width: 430px;
+  height: 882px;
+  background: url("@{PhonePic}") 0 0 no-repeat;
+  background-size: 100%;
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  height: 670px;
+  margin: 106px 26px;
+  background-color: #fff;
+
+  &_hd {
+    overflow: hidden;
+    width: auto;
+    height: 48px;
+    padding: 0 20px;
+    color: #fff;
+    line-height: 48px;
+    text-align: center;
+    background-color: #000;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+  }
+
+  &_bd {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    height: 470px;
+    padding: 15px;
+    background-color: #fff;
+    // background-color: #f2f2f2;
+  }
+
+  &_bg {
+    background-color: #f2f2f2;
+  }
+}

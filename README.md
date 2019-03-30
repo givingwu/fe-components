@@ -39,8 +39,8 @@ This repository used to collect all react/jquery/vue/* components previously i w
   + [OpacityBanner](./src/jquery/OpacityBanner/index.js) 电商首页透明切换等banner，类 [tmall](https://www.tmall.com) 首页 banner 效果。
   + [PreviewSwitcher](./src/jquery/PreviewSwitcher/index.js) 电商商品详情页，动态切换预览图。
   + [CategoryMenu](./src/jquery/CategoryMenu/index.js) 电商 懒加载 种类菜单列表，优化首屏渲染很有效果，支持服务端数据和本地数据。
-  + *[Cascader](./src/jquery/Cascader/index.js) 电商切换区域的级联选择器，实现中ing...
-  + *[LazyLoadDOM](./src/jquery/LazyLoadDOM/index.js) 电商客户端渲染，根据用户交互懒加载特定的 DOM 节点。
+  + *[Cascader](https://github.com/vuchan/jquery-cascader) 电商切换区域的级联选择器
+  + *[LazyLoadDOM](./src/jquery/LazyLoadDOM/index.js) 电商客户端渲染，根据用户交互懒加载特定的 DOM 节点。jquery.inview + template engine
 
 
 ## The questions previously met

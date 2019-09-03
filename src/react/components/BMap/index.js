@@ -1,8 +1,8 @@
 /**
  * Inspired from [`react-bmap`](https://github.com/huiyan-fe/react-bmap)
- * 1. Does not install many Unusable and Complex dependecies.
- * 2. Let Driving Route supports wayPoints. Maybe i shall make a PR for `react-bmap`.
- * 3. Lazy load BMap lib JS SDK.
+ * 1. Does not install any Unusable and Complex dependecies.
+ * 2. Let Driving Route supports wayPoints.
+ * 3. Lazyload BMap lib JS SDK.
  * 4. Only keep four components.
  * 5. Same API with `react-bmap`.
  * @author Vuchan(givingwu@gmail.com)
